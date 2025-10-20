@@ -2887,7 +2887,7 @@ function $h_Lmyapp_App() {
 }
 $h_Lmyapp_App.prototype = $c_Lmyapp_App.prototype;
 $c_Lmyapp_App.prototype.apply__Lcom_raquo_laminar_nodes_ReactiveHtmlElement = (function() {
-  return $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag()).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([new $c_Lmyapp_Component("A").apply__Lcom_raquo_laminar_nodes_ReactiveHtmlElement()])));
+  return $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag()).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([new $c_Lmyapp_Component("A", 1).apply__Lcom_raquo_laminar_nodes_ReactiveHtmlElement()])));
 });
 var $d_Lmyapp_App = new $TypeData().initClass($c_Lmyapp_App, "myapp.App", ({
   Lmyapp_App: 1
@@ -5975,9 +5975,11 @@ var $d_jl_StringBuilder = new $TypeData().initClass($c_jl_StringBuilder, "java.l
 class $c_jl_VirtualMachineError extends $c_jl_Error {
 }
 /** @constructor */
-function $c_Lmyapp_Component(name) {
+function $c_Lmyapp_Component(name, index) {
   this.Lmyapp_Component__f_name = null;
+  this.Lmyapp_Component__f_index = 0;
   this.Lmyapp_Component__f_name = name;
+  this.Lmyapp_Component__f_index = index;
 }
 $c_Lmyapp_Component.prototype = new $h_O();
 $c_Lmyapp_Component.prototype.constructor = $c_Lmyapp_Component;
@@ -5989,14 +5991,25 @@ $c_Lmyapp_Component.prototype.productIterator__sc_Iterator = (function() {
   return new $c_s_Product$$anon$1(this);
 });
 $c_Lmyapp_Component.prototype.hashCode__I = (function() {
-  return $m_s_util_hashing_MurmurHash3$().productHash__s_Product__I__Z__I(this, 1774915677, true);
+  var acc = (-889275714);
+  var hash = acc;
+  acc = $m_sr_Statics$().mix__I__I__I(hash, 604060893);
+  var hash$1 = acc;
+  var x = this.Lmyapp_Component__f_name;
+  var data = $m_sr_Statics$().anyHash__O__I(x);
+  acc = $m_sr_Statics$().mix__I__I__I(hash$1, data);
+  var hash$2 = acc;
+  var data$1 = this.Lmyapp_Component__f_index;
+  acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$1);
+  var hash$3 = acc;
+  return $m_sr_Statics$().finalizeHash__I__I__I(hash$3, 2);
 });
 $c_Lmyapp_Component.prototype.equals__O__Z = (function(x$0) {
   if ((this === x$0)) {
     return true;
   } else if ((x$0 instanceof $c_Lmyapp_Component)) {
     var x2 = $as_Lmyapp_Component(x$0);
-    return ((this.Lmyapp_Component__f_name === $n(x2).Lmyapp_Component__f_name) && ($n(x2), true));
+    return (((this.Lmyapp_Component__f_index === $n(x2).Lmyapp_Component__f_index) && (this.Lmyapp_Component__f_name === $n(x2).Lmyapp_Component__f_name)) && ($n(x2), true));
   } else {
     return false;
   }
@@ -6005,7 +6018,7 @@ $c_Lmyapp_Component.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$()._toString__s_Product__T(this);
 });
 $c_Lmyapp_Component.prototype.productArity__I = (function() {
-  return 1;
+  return 2;
 });
 $c_Lmyapp_Component.prototype.productPrefix__T = (function() {
   return "Component";
@@ -6014,13 +6027,16 @@ $c_Lmyapp_Component.prototype.productElement__I__O = (function(n) {
   if ((n === 0)) {
     return this.Lmyapp_Component__f_name;
   }
+  if ((n === 1)) {
+    return this.Lmyapp_Component__f_index;
+  }
   throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + n));
 });
 $c_Lmyapp_Component.prototype.apply__Lcom_raquo_laminar_nodes_ReactiveHtmlElement = (function() {
   var $x_2 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
   var $x_1 = $m_sr_ScalaRunTime$();
   var this$1 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
-  var value = ("Component: " + this.Lmyapp_Component__f_name);
+  var value = ((this.Lmyapp_Component__f_index + ": Component: ") + this.Lmyapp_Component__f_name);
   var r = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
   return $x_2.apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($x_1.wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_api_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$1, value, r)])));
 });
