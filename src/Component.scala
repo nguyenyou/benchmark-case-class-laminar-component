@@ -2,8 +2,8 @@ package myapp
 
 import com.raquo.laminar.api.L.*
 
-class Component() {
+class Component(name: String) {
   def apply(): HtmlElement = {
-    div("Component")
+    div(s"Component: $name")
   }
 }

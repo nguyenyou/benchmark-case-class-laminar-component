@@ -2887,13 +2887,15 @@ function $h_Lmyapp_App() {
 }
 $h_Lmyapp_App.prototype = $c_Lmyapp_App.prototype;
 $c_Lmyapp_App.prototype.apply__Lcom_raquo_laminar_nodes_ReactiveHtmlElement = (function() {
-  return $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag()).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([new $c_Lmyapp_Component().apply__Lcom_raquo_laminar_nodes_ReactiveHtmlElement()])));
+  return $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag()).apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([new $c_Lmyapp_Component("A").apply__Lcom_raquo_laminar_nodes_ReactiveHtmlElement()])));
 });
 var $d_Lmyapp_App = new $TypeData().initClass($c_Lmyapp_App, "myapp.App", ({
   Lmyapp_App: 1
 }));
 /** @constructor */
-function $c_Lmyapp_Component() {
+function $c_Lmyapp_Component(name) {
+  this.Lmyapp_Component__f_name = null;
+  this.Lmyapp_Component__f_name = name;
 }
 $c_Lmyapp_Component.prototype = new $h_O();
 $c_Lmyapp_Component.prototype.constructor = $c_Lmyapp_Component;
@@ -2905,8 +2907,9 @@ $c_Lmyapp_Component.prototype.apply__Lcom_raquo_laminar_nodes_ReactiveHtmlElemen
   var $x_2 = $n($n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L).div__Lcom_raquo_laminar_tags_HtmlTag());
   var $x_1 = $m_sr_ScalaRunTime$();
   var this$1 = $n($m_Lcom_raquo_laminar_api_package$().Lcom_raquo_laminar_api_package$__f_L);
+  var value = ("Component: " + this.Lmyapp_Component__f_name);
   var r = $m_Lcom_raquo_laminar_modifiers_RenderableText$().Lcom_raquo_laminar_modifiers_RenderableText$__f_stringRenderable;
-  return $x_2.apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($x_1.wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_api_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$1, "Component", r)])));
+  return $x_2.apply__sci_Seq__Lcom_raquo_laminar_nodes_ReactiveHtmlElement($x_1.wrapRefArray__AO__sci_ArraySeq(new ($d_Lcom_raquo_laminar_modifiers_Modifier.getArrayOf().constr)([$f_Lcom_raquo_laminar_api_Implicits__textToTextNode__O__Lcom_raquo_laminar_modifiers_RenderableText__Lcom_raquo_laminar_nodes_TextNode(this$1, value, r)])));
 });
 var $d_Lmyapp_Component = new $TypeData().initClass($c_Lmyapp_Component, "myapp.Component", ({
   Lmyapp_Component: 1

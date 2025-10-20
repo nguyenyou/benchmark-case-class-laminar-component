@@ -5,7 +5,7 @@ import com.raquo.laminar.api.L.*
 class App() {
   def apply(): HtmlElement = {
     div(
-      Component()()
+      Component(name = "A")()
     )
   }
 }
