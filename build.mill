@@ -23,7 +23,7 @@ object www extends ScalaJSModule, ScalafixModule {
   def moduleSplitStyle = ModuleSplitStyle.FewestModules
   
   def mvnDeps = Seq(
-    mvn"com.raquo::laminar::${Versions.laminar}",
+    // mvn"com.raquo::laminar::${Versions.laminar}",
     mvn"org.scala-js::scalajs-dom::${Versions.sjsdom}"
   )
 
