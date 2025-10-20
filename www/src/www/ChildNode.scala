@@ -2,6 +2,10 @@ package www
 
 import org.scalajs.dom
 
-trait ChildNode[Ref] extends ReactiveNode[Ref], Modifier[dom.Element] {
-  override def apply(parentNode: dom.Element): Unit = {}
+trait ChildNode[Ref <: dom.Node]
+    extends ReactiveNode[Ref],
+      Modifier[dom.Element] {
+  override def apply(parentNode: dom.Element): Unit = {
+    parentNode.appendChild(ref)
+  }
 }
