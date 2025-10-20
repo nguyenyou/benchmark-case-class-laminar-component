@@ -9,3 +9,7 @@ trait ChildNode[Ref <: dom.Node]
     parentNode.appendChild(ref)
   }
 }
+
+object ChildNode {
+  type Base = ChildNode[dom.Node]
+}
