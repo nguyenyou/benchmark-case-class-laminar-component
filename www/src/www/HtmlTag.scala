@@ -1,3 +1,5 @@
 package www
 
-import scalatags.Text.all._
+object HtmlTag {
+  def div() = {}
+}
